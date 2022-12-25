@@ -53,9 +53,20 @@ if __name__ == "__main__":
     while True:
         # sentence = "do you use credit cards?"
         sentence = input("You: ")
+        x=sentence.split(' ')
+        a = int(x[0])
+        b= int(x[1]);
+        Bmi= b/((a/100)*(a/100))
+        print(Bmi);
+        if(Bmi<18.5):
+            mess="thin"
+        elif (Bmi>=23):
+            mess="fat"     
+        else: 
+            mess="beauty" 
         if sentence == "quit":
             break
-
-        resp = get_response(sentence)
+        print(mess)
+        resp = get_response(mess)
         print(resp)
 

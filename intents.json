@@ -79,6 +79,33 @@
         "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
         "What did the buffalo say when his son left for college? Bison."
       ]
+    },
+    {
+      "tag": "test",
+      "patterns": [
+        "thin"
+      ],
+      "responses": [
+        "123"
+      ]
+    },
+    {
+      "tag": "test2",
+      "patterns": [
+        "fat"
+      ],
+      "responses": [
+        "1234"
+      ]
+    },
+    {
+      "tag": "test3",
+      "patterns": [
+        "beauty"
+      ],
+      "responses": [
+        "12345"
+      ]
     }
   ]
 }

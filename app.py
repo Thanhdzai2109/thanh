@@ -12,7 +12,16 @@ def index_get():
 @app.post("/predict")
 def predict():
     text = request.get_json().get("message")
-    reponse = get_response(text)
+    a = int(text[0])
+    b= int(text[1]);
+    Bmi= b/((a/100)*(a/100))
+    if(Bmi<18.5):
+            mess="thin"
+    elif (Bmi>=23):
+            mess="fat"     
+    else: 
+            mess="beauty" 
+    reponse = get_response(mess)
     message = {"answer": reponse}
     return jsonify(message)
 
