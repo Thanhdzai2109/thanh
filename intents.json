@@ -95,7 +95,7 @@
         "fat"
       ],
       "responses": [
-        "1234"
+        "Ban hoi beo vi vay nen mac bo quan ao bo mot chut tranh mac do rong"
       ]
     },
     {
@@ -104,7 +104,7 @@
         "beauty"
       ],
       "responses": [
-        "12345"
+        "Ban co than hinh tuyet voi ban nen mac bo quan ao tuoi tan de lam noi bat dang nguoi ban hon"
       ]
     },
     {
@@ -123,6 +123,34 @@
       ],
       "responses":[
         "Lam sach voi tay trang , sua rua mat va tay da chet tu nhien"
+      ]
+    },
+    
+    {
+      "tag":"test6",
+      "patterns":[
+        "Xin chao"
+      ],
+      "responses":[
+        "Chao ban chung toi co the giup gi cho ban"
+      ]
+    },
+    {
+      "tag":"test 7",
+      "patterns":[
+        "toi muon tu van da"
+      ],
+      "responses":[
+        "Da cua ban thuoc loai gi"
+      ]
+    },
+    {
+      "tag":"test8",
+      "patterns":[
+        "toi muon tu van trang phuc"
+      ],
+      "responses":[
+        "Moi ban cho toi biet chieu cao(cm) can nang (kg) "
       ]
     }
   ]
