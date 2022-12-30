@@ -86,7 +86,7 @@
         "thin"
       ],
       "responses": [
-        "123"
+        "Ban hoi gay vi vay nen tranh mac do bo sat ma hay mac bo quan ao sang ket hop voi ao khoac"
       ]
     },
     {
@@ -105,6 +105,24 @@
       ],
       "responses": [
         "12345"
+      ]
+    },
+    {
+      "tag":"test4",
+      "patterns":[
+        "Da kho"
+      ],
+      "responses":[
+        "Ban nen duong am bang cac loai dau tu nhien ,chua cac thanh phan mat ong "
+      ]
+    },
+    {
+      "tag":"test 5",
+      "patterns":[
+        "Da dau"
+      ],
+      "responses":[
+        "Lam sach voi tay trang , sua rua mat va tay da chet tu nhien"
       ]
     }
   ]
