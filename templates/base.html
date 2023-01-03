@@ -15,8 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
@@ -84,7 +83,8 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-        <div class="chatbox">
+        <div class="chatbox" style="display: flex;
+        top: 100px;">
             <div class="chatbox__support">
                 <div class="chatbox__header">
                     <div class="chatbox__image--header">
@@ -98,7 +98,9 @@
                     </div>
                 </div>
                 <div class="chatbox__messages">
-                    <div></div>
+                  <div class="messages__item messages__item--visitor">Chào bạn! Tư vấn trang phục và số đo cơ thể chọn "1"!</div>
+                  <div class="messages__item messages__item--visitor">Chào bạn! Tư vấn làm đẹp da chọn "2"!</div>
+                  <div class="chatbox_messages" style="display:flex ; flex-direction: column-reverse;"></div>
                 </div>
                 <div class="chatbox__footer">
                     <input type="text" placeholder="Nhập nội dung tin nhắn...">
@@ -110,7 +112,7 @@
             </div>
         </div>
     <script>
-        $SCRIPT_ROOT = {{ request.script_root | tojson }};
+        // $SCRIPT_ROOT = {{ request.script_root | tojson }};
     </script>
     <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 

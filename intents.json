@@ -38,10 +38,7 @@
         "What kinds of items are there?",
         "What do you sell?"
       ],
-      "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
-      ]
+      "responses": ["We sell coffee and tea", "We have coffee and tea"]
     },
     {
       "tag": "payments",
@@ -63,10 +60,7 @@
         "How long does shipping take?",
         "When do I get my delivery?"
       ],
-      "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
-      ]
+      "responses": ["Delivery takes 2-4 days", "Shipping takes 2-4 days"]
     },
     {
       "tag": "funny",
@@ -82,76 +76,52 @@
     },
     {
       "tag": "test",
-      "patterns": [
-        "thin"
-      ],
+      "patterns": ["thin"],
       "responses": [
         "Ban hoi gay vi vay nen tranh mac do bo sat ma hay mac bo quan ao sang ket hop voi ao khoac"
       ]
     },
     {
       "tag": "test2",
-      "patterns": [
-        "fat"
-      ],
+      "patterns": ["fat"],
       "responses": [
         "Ban hoi beo vi vay nen mac bo quan ao bo mot chut tranh mac do rong"
       ]
     },
     {
       "tag": "test3",
-      "patterns": [
-        "beauty"
-      ],
+      "patterns": ["beauty"],
       "responses": [
         "Ban co than hinh tuyet voi ban nen mac bo quan ao tuoi tan de lam noi bat dang nguoi ban hon"
       ]
     },
     {
-      "tag":"test4",
-      "patterns":[
-        "Da kho"
-      ],
-      "responses":[
+      "tag": "test4",
+      "patterns": ["Da kho"],
+      "responses": [
         "Ban nen duong am bang cac loai dau tu nhien ,chua cac thanh phan mat ong "
       ]
     },
     {
-      "tag":"test 5",
-      "patterns":[
-        "Da dau"
-      ],
-      "responses":[
-        "Lam sach voi tay trang , sua rua mat va tay da chet tu nhien"
-      ]
+      "tag": "test 5",
+      "patterns": ["Da dau"],
+      "responses": ["Lam sach voi tay trang"]
     },
-    
+
     {
-      "tag":"test6",
-      "patterns":[
-        "Xin chao"
-      ],
-      "responses":[
-        "Chao ban chung toi co the giup gi cho ban"
-      ]
+      "tag": "test6",
+      "patterns": ["Xin chao"],
+      "responses": ["Chao ban chung toi co the giup gi cho ban"]
     },
     {
-      "tag":"test 7",
-      "patterns":[
-        "toi muon tu van da"
-      ],
-      "responses":[
-        "Da cua ban thuoc loai gi"
-      ]
+      "tag": "test 7",
+      "patterns": ["toi muon tu van da"],
+      "responses": ["Da cua ban thuoc loai gi"]
     },
     {
-      "tag":"test8",
-      "patterns":[
-        "toi muon tu van trang phuc"
-      ],
-      "responses":[
-        "Moi ban cho toi biet chieu cao(cm) can nang (kg) "
-      ]
+      "tag": "test8",
+      "patterns": ["toi muon tu van trang phuc"],
+      "responses": ["Moi ban cho toi biet chieu cao(cm) can nang (kg) "]
     }
   ]
 }

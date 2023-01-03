@@ -13,8 +13,8 @@ def contains_number(string):
             return True
     return False
 
-@app.post("/predict")
-def predict():   
+@app.post("/question")
+def ques():   
      text = request.get_json().get("message")
      if contains_number(text)==True:
       a = int(text[0])

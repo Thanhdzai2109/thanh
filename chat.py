@@ -48,25 +48,24 @@ def get_response(msg):
     return "I do not understand..."
 
 
-if __name__ == "__main__":
-    print("Let's chat! (type 'quit' to exit)")
-    while True:
-        # sentence = "do you use credit cards?"
-        sentence = input("You: ")
-        x=sentence.split(' ')
-        a = int(x[0])
-        b= int(x[1]);
-        Bmi= b/((a/100)*(a/100))
-        print(Bmi);
-        if(Bmi<18.5):
-            mess="thin"
-        elif (Bmi>=23):
-            mess="fat"     
-        else: 
-            mess="beauty" 
-        if sentence == "quit":
-            break
-        print(mess)
-        resp = get_response(mess)
-        print(resp)
+# if __name__ == "__main__":
+
+#     while True:
+#         sentence = input("You: ")
+#         x=sentence.split(' ')
+#         a = int(x[0])
+#         b= int(x[1]);
+#         Bmi= b/((a/100)*(a/100))
+#         print(Bmi);
+#         if(Bmi<18.5):
+#             mess="thin"
+#         elif (Bmi>=23):
+#             mess="fat"     
+#         else: 
+#             mess="beauty" 
+#         if sentence == "quit":
+#             break
+#         print(mess)
+#         resp = get_response(mess)
+#         print(resp)
 
