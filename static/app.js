@@ -54,7 +54,15 @@ class Chatbox {
     })
       .then((r) => r.json())
       .then((r) => {
-        let msg2 = { name: "Bot", message: r.answer, bmi: r.bmi };
+        let msg2 = {
+          name: "Bot",
+          message: r.answer,
+          bmi: r.bmi,
+          v1: r.vong1,
+          v2: r.vong2,
+          v3: r.vong3,
+          gen: r.gen,
+        };
         this.messages.push(msg2);
         this.updateChatText(chatbox);
         textField.value = "";
@@ -73,10 +81,32 @@ class Chatbox {
       .reverse()
       .forEach(function (item, index) {
         if (item.name === "Bot") {
-          html +=
-            '<div class="messages__item messages__item--visitor">' +
-            item.message +
-            "</div>";
+          if (item.bmi > 0) {
+            html +=
+              '<div class="messages__item messages__item--visitor">' +
+              "Chỉ số bmi của bạn là: " +
+              item.bmi +
+              ", " +
+              "Vòng 1: " +
+              item.v1 +
+              ", " +
+              "Vòng 2: " +
+              item.v2 +
+              ", " +
+              "Vòng 3: " +
+              item.v3 +
+              "</div>";
+
+            html +=
+              '<div class="messages__item messages__item--visitor">' +
+              item.message +
+              "</div>";
+          } else {
+            html +=
+              '<div class="messages__item messages__item--visitor">' +
+              item.message +
+              "</div>";
+          }
         } else {
           html +=
             '<div class="messages__item messages__item--operator">' +
