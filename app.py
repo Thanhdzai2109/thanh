@@ -34,7 +34,7 @@ def question():
             message = {"answer": reponse}
             return jsonify(message)
 
-        bmi=b/(a/100)*(a/100)
+        bmi=b/((a/100)*(a/100))
         if bmi<18.5:
             mess="thin"
         elif bmi > 24.9:
