@@ -12,27 +12,42 @@ def contains_number(string):
         if str(i) in list(string):
             return True
     return False
-
+def full_number(string):
+    a=string.split()
+    b=[]
+    for i in a:
+        if(contains_number(i)):
+            b.append(int(i))
+    return b
 @app.post("/question")
-def ques():   
-     text = request.get_json().get("message")
-     if contains_number(text)==True:
-      a = int(text[0])
-      b = int(text[1])
-      Bmi = b/((a/100)*(a/100))
-      if (Bmi < 18.5):
-         mess = "thin"
-      elif (Bmi >= 23):
-         mess = "fat"
-      else:
-         mess = "beauty"
-      reponse = get_response(mess)
-      message = {"answer": reponse}
-      return jsonify(message)
-     else :
-      reponse = get_response(text)
-      message = {"answer": reponse}
-      return jsonify(message)     
+def question():   
+    text = request.get_json().get("message")
+    a=0;b=0;bmi=0
+    listNumber = full_number(text)
+    if len(listNumber) >0:
+        if len(listNumber) >1:
+            a=listNumber[0]
+            b=listNumber[1]
+        else:
+            mess="none"
+            reponse = get_response(mess)
+            message = {"answer": reponse}
+            return jsonify(message)
+
+        bmi=b/(a/100)*(a/100)
+        if bmi<18.5:
+            mess="thin"
+        elif bmi > 24.9:
+            mess="fat"
+        else:
+            mess="beauty"
+        reponse = get_response(mess)
+        message = {"answer": reponse}
+        return jsonify(message)
+    else :
+        reponse = get_response(text)
+        message = {"answer": reponse}
+        return jsonify(message)     
 
 
 if __name__ == "__main__":

@@ -54,7 +54,7 @@ class Chatbox {
     })
       .then((r) => r.json())
       .then((r) => {
-        let msg2 = { name: "Sam", message: r.answer };
+        let msg2 = { name: "Bot", message: r.answer, bmi: r.bmi };
         this.messages.push(msg2);
         this.updateChatText(chatbox);
         textField.value = "";
@@ -72,7 +72,7 @@ class Chatbox {
       .slice()
       .reverse()
       .forEach(function (item, index) {
-        if (item.name === "Sam") {
+        if (item.name === "Bot") {
           html +=
             '<div class="messages__item messages__item--visitor">' +
             item.message +

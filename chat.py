@@ -25,7 +25,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Sam"
+bot_name = "Bot"
 
 def get_response(msg):
     sentence = tokenize(msg)
@@ -48,24 +48,4 @@ def get_response(msg):
     return "I do not understand..."
 
 
-# if __name__ == "__main__":
-
-#     while True:
-#         sentence = input("You: ")
-#         x=sentence.split(' ')
-#         a = int(x[0])
-#         b= int(x[1]);
-#         Bmi= b/((a/100)*(a/100))
-#         print(Bmi);
-#         if(Bmi<18.5):
-#             mess="thin"
-#         elif (Bmi>=23):
-#             mess="fat"     
-#         else: 
-#             mess="beauty" 
-#         if sentence == "quit":
-#             break
-#         print(mess)
-#         resp = get_response(mess)
-#         print(resp)
 

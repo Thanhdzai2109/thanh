@@ -122,6 +122,21 @@
       "tag": "test8",
       "patterns": ["toi muon tu van trang phuc"],
       "responses": ["Moi ban cho toi biet chieu cao(cm) can nang (kg) "]
+    },
+    {
+      "tag": "test9",
+      "patterns": ["optiona"],
+      "responses": ["Moi ban cho toi biet chieu cao(cm) can nang (kg) "]
+    },
+    {
+      "tag": "test10",
+      "patterns": ["optionb"],
+      "responses": ["Cho toi biet dac diem da cua ban"]
+    },
+    {
+      "tag": "test11",
+      "patterns": ["none"],
+      "responses": ["hay nhap dung chieu cao can nang cua ban!"]
     }
   ]
 }
