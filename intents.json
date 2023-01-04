@@ -115,12 +115,12 @@
     },
     {
       "tag": "test 7",
-      "patterns": ["toi muon tu van da"],
+      "patterns": ["cham soc da"],
       "responses": ["Da cua ban thuoc loai gi"]
     },
     {
       "tag": "test8",
-      "patterns": ["toi muon tu van trang phuc"],
+      "patterns": ["trang phuc"],
       "responses": ["Moi ban cho toi biet chieu cao(cm) can nang (kg) "]
     },
     {
