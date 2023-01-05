@@ -62,9 +62,31 @@ def pointSkin(string):
             return ([skin[id]["tag"],skin[id]["patterns"],skin[id]["responses"]])
         else:
             return []
+def point(string):
+    point=0
+    listTong=[]
+    tc=string.split(",")
+    tc.pop()
+    with open("skin.json",encoding="utf-8") as skin_file:
+        data=json.load(skin_file)
+        skin=data["skins"]
+        for sk in skin:
+            point=0
+            tong=sum(sk["point"])
+            for s in sk["patterns"]:
+                for t in tc:
+                    if t==s:
+                        index=sk["patterns"].index(s)
+                        
+                        point+=sk["point"][index]
+            listTong.append(point/tong)   
+        m=max(listTong)
+        if(m!=0):
+            id=listTong.index(m)
+            return ([skin[id]["tag"],skin[id]["patterns"],skin[id]["responses"]])
+        return []
 
-
-# print(pointSkin("trang phuc"))
-print(getSkin("da dau"))
+print(point("Căng,"))
+# print(getSkin("Căng,"))
 # print(printSkin())
 # print(math("Nam 170 65"))

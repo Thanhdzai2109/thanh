@@ -50,23 +50,20 @@ def pointSkin(string):
         data=json.load(skin_file)
         skin=data["skins"]
         for sk in skin:
-            tong=0
-            for p in sk["point"]:
-                tong+=p
-        for t in tc:
-            for sk in skin:
-                for s in sk["patterns"]:
+            point=0
+            tong=sum(sk["point"])
+            for s in sk["patterns"]:
+                for t in tc:
                     if t==s:
                         index=sk["patterns"].index(s)
+                        
                         point+=sk["point"][index]
-        
-        listTong.append(point)
+            listTong.append(point/tong)   
         m=max(listTong)
         if(m!=0):
             id=listTong.index(m)
             return ([skin[id]["tag"],skin[id]["patterns"],skin[id]["responses"]])
-        else:
-            return []
+        return []
 
 @app.post("/question")
 
@@ -116,7 +113,7 @@ def question():
     else :
         skinMess=getSkin(text)
         pSkin=pointSkin(text)
-        ls=len(skinMess)
+        l=len(pSkin)
         reponse = get_response(text)
 
         message = {"answer": reponse,"bmi":bmi,"vong1":v1,"vong2":v2,"vong3":v3,"skinMess":skinMess,"pointSkin":pSkin,"lenSkin":l}

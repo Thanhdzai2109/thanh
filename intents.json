@@ -81,7 +81,10 @@
     {
       "tag": "test 7",
       "patterns": ["cham soc da", "chăm sóc da"],
-      "responses": ["Da cua ban thuoc loai gi", "Da của bạn thuộc loại gì?"]
+      "responses": [
+        "Da cua ban thuoc loai gi? Nếu bạn không rõ hay nhập những biểu hiện da của bạn trong list sau đây[Căng,Bong tróc,Nhiều mụn,Bệnh về da,Nhiều dầu,Ngứa,Mẩn đỏ,Dễ dị ứng,Sần sùi,Lỗ chân lông to]",
+        "Da của bạn thuộc loại gì? Nếu bạn không rõ hay nhập những biểu hiện da của bạn trong list sau đây[Căng,Bong tróc,Nhiều mụn,Bệnh về da,Nhiều dầu,Ngứa,Mẩn đỏ,Dễ dị ứng,Sần sùi,Lỗ chân lông to]"
+      ]
     },
     {
       "tag": "test8",
