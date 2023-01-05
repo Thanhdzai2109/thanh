@@ -80,6 +80,11 @@ class Chatbox {
       .slice()
       .reverse()
       .forEach(function (item, index) {
+        if( item.gen=="Nam"){
+          html+="Bạn có thể tham khảo mẫu trang phục cho Nam"+"<img src='https://toplist.vn/images/800px/mando-shop-565775.jpg'></img>"
+        }else if (item.gen=="Nữ") {
+          html+="Bạn có thể tham khảo mẫu trang phục cho Nữ"+"<img src='https://cdn.gumac.vn/image/01/onpage/bai-5/ao-phong-nu-han-quoc-ha-noi210320191629187152.jpg'></img>"
+        }
         if (item.name === "Bot") {
           if (item.bmi > 0) {
             html +=
