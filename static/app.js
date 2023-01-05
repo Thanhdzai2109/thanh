@@ -16,7 +16,7 @@ class Chatbox {
 
     sendButton.addEventListener("click", () => this.onSendButton(chatBox));
 
-    const node = chatBox.querySelector("input");
+    const node = document.getElementById("in");
     node.addEventListener("keyup", ({ key }) => {
       if (key === "Enter") {
         this.onSendButton(chatBox);
@@ -35,7 +35,7 @@ class Chatbox {
   }
 
   onSendButton(chatbox) {
-    var textField = chatbox.querySelector("input");
+    var textField = document.getElementById("in");
     let text1 = textField.value;
     if (text1 === "") {
       return;
@@ -61,6 +61,9 @@ class Chatbox {
           v1: r.vong1,
           v2: r.vong2,
           v3: r.vong3,
+          skin: r.skinMess,
+          point: r.pointSkin,
+          l: r.lenSkin,
         };
         this.messages.push(msg2);
         this.updateChatText(chatbox);
@@ -79,11 +82,6 @@ class Chatbox {
       .slice()
       .reverse()
       .forEach(function (item, index) {
-        if( item.gen=="Nam"){
-          html+="Bạn có thể tham khảo mẫu trang phục cho Nam"+"<img src='https://toplist.vn/images/800px/mando-shop-565775.jpg'></img>"
-        }else if (item.gen=="Nữ") {
-          html+="Bạn có thể tham khảo mẫu trang phục cho Nữ"+"<img src='https://cdn.gumac.vn/image/01/onpage/bai-5/ao-phong-nu-han-quoc-ha-noi210320191629187152.jpg'></img>"
-        }
         if (item.name === "Bot") {
           if (item.bmi > 0) {
             html +=
@@ -107,10 +105,24 @@ class Chatbox {
               "hãy chọn size quần áo cho phù hợp với kích thước cơ thể!" +
               "</div>";
           } else {
-            html +=
-              '<div class="messages__item messages__item--visitor">' +
-              item.message +
-              "</div>";
+            if (item.l > 0) {
+              html +=
+                '<div class="messages__item messages__item--visitor">' +
+                "Da của bạn thuộc loại: " +
+                item.point[0] +
+                "<br>" +
+                "Triệu chứng: " +
+                item.point[1] +
+                "<br>" +
+                "Để da đẹp hơn bạn cần: " +
+                item.point[2] +
+                "</div>";
+            } else {
+              html +=
+                '<div class="messages__item messages__item--visitor">' +
+                item.skin +
+                "</div>";
+            }
           }
         } else {
           html +=

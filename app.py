@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from chat import get_response
-
+import json
+import random
 app = Flask(__name__)
 
 
@@ -27,12 +28,46 @@ def gender(string):
         if(i=="Nữ" or i=="nữ" or i== "nu" or i=="Nu"):
             return "Nữ"
     return "none"
+def getSkin(string):
+    with open("skin.json",encoding="utf-8") as skin_file:
+        data=json.load(skin_file)
+        res=[]
+        for skin in data['skins']:
+            if string in skin["tag"]:
+                res.append(skin['patterns'])
+                res.append(random.choice(skin['responses']))
+                return res
+        res.append("Tôi không hiểu tình trạng da của bạn ...")
+def pointSkin(string):
+    point=0
+    listTong=[]
+    tc=string.split(",")
+    tc.pop()
+    with open("skin.json",encoding="utf-8") as skin_file:
+        data=json.load(skin_file)
+        skin=data["skins"]
+        for sk in skin:
+            tong=0
+            for p in sk["point"]:
+                tong+=p
+        for t in tc:
+            for sk in skin:
+                for s in sk["patterns"]:
+                    if t==s:
+                        index=sk["patterns"].index(s)
+                        point+=sk["point"][index]
+        
+        listTong.append(point)
+        m=max(listTong)
+        id=listTong.index(m)
+
+    return [skin[id]["tag"],skin[id]["patterns"],skin[id]["responses"]]
 
 @app.post("/question")
 
 def question():   
     text = request.get_json().get("message")
-    a=0;b=0;bmi=0;v1=0;v2=0;v3=0
+    a=0;b=0;bmi=0;v1=0;v2=0;v3=0;skinMess=[];l=0
     gen=gender(text)
     listNumber = full_number(text)
     
@@ -71,11 +106,15 @@ def question():
 
         
         reponse = get_response(mess)
-        message = {"answer": reponse,"bmi":bmi,"vong1":v1,"vong2":v2,"vong3":v3}
+        message = {"answer": reponse,"bmi":bmi,"vong1":v1,"vong2":v2,"vong3":v3,"skinMess":skinMess,"lenSkin":l}
         return jsonify(message)
     else :
+        skinMess=getSkin(text)
+        pSkin=pointSkin(text)
+        l=len(pSkin)
         reponse = get_response(text)
-        message = {"answer": reponse,"bmi":bmi,"vong1":v1,"vong2":v2,"vong3":v3}
+
+        message = {"answer": reponse,"bmi":bmi,"vong1":v1,"vong2":v2,"vong3":v3,"skinMess":skinMess,"pointSkin":pSkin,"lenSkin":l}
         return jsonify(message)     
 
 

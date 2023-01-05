@@ -100,10 +100,29 @@
                 <div class="chatbox__messages">
                   <div class="messages__item messages__item--visitor">Chào bạn! Tư vấn trang phục và số đo cơ thể chọn "trang phuc"!</div>
                   <div class="messages__item messages__item--visitor">Chào bạn! Tư vấn làm đẹp da chọn "cham soc da"!</div>
-                  <div class="chatbox_messages" style="display:flex ; flex-direction: column-reverse;"></div>
+                  <div class="chatbox_messages" style="display:flex ; flex-direction: column-reverse;">
+                    <div class="trieutrung">
+                      <legend>Chọn các đặc điểm dưới đây để chúng tôi có thể chuẩn đoán loại da của bạn:</legend>
+
+                      <div>
+                        <input type="checkbox" class="box" id="ngua" name="ngua" value="ngứa">
+                        <label for="ngua">Ngứa</label>
+                      </div>
+
+                      <div>
+                        <input type="checkbox" class="box" id="sansui" name="sansui" value="sần sùi">
+                        <label for="sansui">Sần sùi</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" class="box" id="bongtroc" name="bongtroc" value="bong tróc">
+                        <label for="bongtroc">Bong tróc</label>
+                      </div>
+                      <button class="send-checkbox" id="btn">Gửi</button>
+                    </div>
+                  </div>
                 </div>
                 <div class="chatbox__footer">
-                    <input type="text" placeholder="Nhập nội dung tin nhắn...">
+                    <input type="text" placeholder="Nhập nội dung tin nhắn..." id="in">
                     <button class="chatbox__send--footer send__button">Gửi</button>
                 </div>
             </div>
@@ -115,7 +134,25 @@
         // $SCRIPT_ROOT = {{ request.script_root | tojson }};
     </script>
     <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script language="javascript">
+      document.getElementById('btn').onclick = function()
+      {
+          // Khai báo tham số
+          var checkbox = document.getElementsByClassName('box');
+          var result = "";
+           
+          // Lặp qua từng checkbox để lấy giá trị
+          for (var i = 0; i < checkbox.length; i++){
+              if (checkbox[i].checked === true){
+                  result += checkbox[i].value + ',';
+              }
+          }
+           console.log(result)
+          // In ra kết quả
+          document.getElementById('in').value = result;
+      };
+  </script>
 </body>
 
 </html>

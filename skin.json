@@ -1,0 +1,40 @@
+{
+  "skins": [
+    {
+      "id": 1,
+      "tag": ["da kho", "da khô", "khô"],
+      "patterns": ["Căng", "Sần sùi", "Bong tróc", "Ngứa"],
+      "point": [1, 5, 6, 4],
+      "responses": [
+        "Da khô nên dưỡng ẩm bằng các loại dầu tự nhiên, sử dụng dưỡng da có chứa thành phần Mật Ong và nên loại bỏ sữa rửa mặt hoạt chất mạnh ra khỏi chu trình chăm sóc da. việc bổ sung các sản phẩm có chứa Ceramides sẽ giúp phục hồi lớp biểu bì của da làm da khỏe mạnh và cải thiện được tình trạng da khô"
+      ]
+    },
+    {
+      "id": 2,
+      "tag": ["da mun", "da mụn", "mụn"],
+      "patterns": ["Nhiều mụn", "Bệnh về da", "Nhiều dầu"],
+      "point": [6, 5, 3],
+      "responses": [
+        "Dùng sản phẩm có thể loại bỏ bã nhờn dư thừa. Nên tham khảo sự tư vấn của bác sĩ da liễu có thể kê toa thuốc kháng sinh uống hoặc bôi cùng với thuốc benzoyl-peroxide để điều trị tình trạng da mụn."
+      ]
+    },
+    {
+      "id": 3,
+      "tag": ["kích ứng", "kich ung"],
+      "patterns": ["Nhiều mụn", "Bong tróc", "Ngứa", "Mẩn đỏ"],
+      "point": [4, 4, 4, 5],
+      "responses": [
+        "Dùng loại sữa rửa mặt dịu nhẹ chuyên sâu, chọn các sản phẩm an toàn, lành tính cho da"
+      ]
+    },
+    {
+      "id": 4,
+      "tag": ["da dau", "da dầu"],
+      "patterns": ["mịn", "Lỗ chân lông to", "Nhiều mụn", "Nhiều dầu"],
+      "point": [3, 3, 4, 6],
+      "responses": [
+        "Dùng loại sữa rửa mặt dịu nhẹ chuyên sâu, chọn các sản phẩm an toàn, lành tính cho da"
+      ]
+    }
+  ]
+}
