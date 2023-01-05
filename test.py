@@ -23,7 +23,7 @@ def getSkin(string):
                 res.append(skin['patterns'])
                 res.append(random.choice(skin['responses']))
                 return res
-        res.append(["none"])
+        res.append("none")
         res.append("Tôi không hiểu...")
         return res
 def printSkin():
@@ -57,12 +57,14 @@ def pointSkin(string):
         
         listTong.append(point)
         m=max(listTong)
-        id=listTong.index(m)
+        if(m!=0):
+            id=listTong.index(m)
+            return ([skin[id]["tag"],skin[id]["patterns"],skin[id]["responses"]])
+        else:
+            return []
 
-    return ([skin[id]["tag"],skin[id]["patterns"],skin[id]["responses"]])
 
-
-print(pointSkin("Căng,Bong tróc,"))
-# print(getSkin("da kh"))
+# print(pointSkin("trang phuc"))
+print(getSkin("da dau"))
 # print(printSkin())
 # print(math("Nam 170 65"))

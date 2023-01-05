@@ -34,10 +34,13 @@ def getSkin(string):
         res=[]
         for skin in data['skins']:
             if string in skin["tag"]:
+                res.append(skin['tag'])
                 res.append(skin['patterns'])
                 res.append(random.choice(skin['responses']))
                 return res
-        res.append("Tôi không hiểu tình trạng da của bạn ...")
+        res.append("none")
+        res.append("Tôi không hiểu...")
+        return res
 def pointSkin(string):
     point=0
     listTong=[]
@@ -59,9 +62,11 @@ def pointSkin(string):
         
         listTong.append(point)
         m=max(listTong)
-        id=listTong.index(m)
-
-    return [skin[id]["tag"],skin[id]["patterns"],skin[id]["responses"]]
+        if(m!=0):
+            id=listTong.index(m)
+            return ([skin[id]["tag"],skin[id]["patterns"],skin[id]["responses"]])
+        else:
+            return []
 
 @app.post("/question")
 
@@ -111,7 +116,7 @@ def question():
     else :
         skinMess=getSkin(text)
         pSkin=pointSkin(text)
-        l=len(pSkin)
+        ls=len(skinMess)
         reponse = get_response(text)
 
         message = {"answer": reponse,"bmi":bmi,"vong1":v1,"vong2":v2,"vong3":v3,"skinMess":skinMess,"pointSkin":pSkin,"lenSkin":l}

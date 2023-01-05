@@ -13,7 +13,7 @@
       "id": 2,
       "tag": ["da mun", "da mụn", "mụn"],
       "patterns": ["Nhiều mụn", "Bệnh về da", "Nhiều dầu"],
-      "point": [6, 5, 3],
+      "point": [6, 5, 2],
       "responses": [
         "Dùng sản phẩm có thể loại bỏ bã nhờn dư thừa. Nên tham khảo sự tư vấn của bác sĩ da liễu có thể kê toa thuốc kháng sinh uống hoặc bôi cùng với thuốc benzoyl-peroxide để điều trị tình trạng da mụn."
       ]
@@ -21,8 +21,8 @@
     {
       "id": 3,
       "tag": ["kích ứng", "kich ung"],
-      "patterns": ["Nhiều mụn", "Bong tróc", "Ngứa", "Mẩn đỏ"],
-      "point": [4, 4, 4, 5],
+      "patterns": ["Nhiều mụn", "Bong tróc", "Ngứa", "Mẩn đỏ", "Dễ dị ứng"],
+      "point": [4, 4, 4, 5, 5],
       "responses": [
         "Dùng loại sữa rửa mặt dịu nhẹ chuyên sâu, chọn các sản phẩm an toàn, lành tính cho da"
       ]

@@ -105,18 +105,25 @@ class Chatbox {
               "hãy chọn size quần áo cho phù hợp với kích thước cơ thể!" +
               "</div>";
           } else {
-            if (item.l > 0) {
-              html +=
-                '<div class="messages__item messages__item--visitor">' +
-                "Da của bạn thuộc loại: " +
-                item.point[0] +
-                "<br>" +
-                "Triệu chứng: " +
-                item.point[1] +
-                "<br>" +
-                "Để da đẹp hơn bạn cần: " +
-                item.point[2] +
-                "</div>";
+            if (item.skin[0] == "none") {
+              if (item.l > 0) {
+                html +=
+                  '<div class="messages__item messages__item--visitor">' +
+                  "Da của bạn thuộc loại: " +
+                  item.point[0] +
+                  "<br>" +
+                  "Triệu chứng: " +
+                  item.point[1] +
+                  "<br>" +
+                  "Để da đẹp hơn bạn cần: " +
+                  item.point[2] +
+                  "</div>";
+              } else {
+                html +=
+                  '<div class="messages__item messages__item--visitor">' +
+                  item.message +
+                  "</div>";
+              }
             } else {
               html +=
                 '<div class="messages__item messages__item--visitor">' +
