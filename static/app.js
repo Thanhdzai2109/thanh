@@ -61,7 +61,6 @@ class Chatbox {
           v1: r.vong1,
           v2: r.vong2,
           v3: r.vong3,
-          gen: r.gen,
         };
         this.messages.push(msg2);
         this.updateChatText(chatbox);
@@ -84,6 +83,10 @@ class Chatbox {
           if (item.bmi > 0) {
             html +=
               '<div class="messages__item messages__item--visitor">' +
+              item.message +
+              "</div>";
+            html +=
+              '<div class="messages__item messages__item--visitor">' +
               "Chỉ số bmi của bạn là: " +
               item.bmi +
               ", " +
@@ -95,11 +98,8 @@ class Chatbox {
               ", " +
               "Vòng 3: " +
               item.v3 +
-              "</div>";
-
-            html +=
-              '<div class="messages__item messages__item--visitor">' +
-              item.message +
+              "<br>" +
+              "hãy chọn size quần áo cho phù hợp với kích thước cơ thể!" +
               "</div>";
           } else {
             html +=

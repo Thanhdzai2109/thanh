@@ -71,11 +71,11 @@ def question():
 
         
         reponse = get_response(mess)
-        message = {"answer": reponse,"bmi":bmi,"vong1":v1,"vong2":v2,"vong3":v3,"gen":gen}
+        message = {"answer": reponse,"bmi":bmi,"vong1":v1,"vong2":v2,"vong3":v3}
         return jsonify(message)
     else :
         reponse = get_response(text)
-        message = {"answer": reponse,"bmi":bmi,"vong1":v1,"vong2":v2,"vong3":v3,"gen":gen}
+        message = {"answer": reponse,"bmi":bmi,"vong1":v1,"vong2":v2,"vong3":v3}
         return jsonify(message)     
 
 

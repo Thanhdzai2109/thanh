@@ -39,7 +39,8 @@
       "tag": "test",
       "patterns": ["thin"],
       "responses": [
-        "Ban hoi gay vi vay nen tranh mac do bo sat ma hay mac bo quan ao sang ket hop voi ao khoac"
+        "Ban hoi gay vi vay nen tranh mac do bo sat ma hay mac bo quan ao sang ket hop voi ao khoac",
+        "Mặc đồ vừa vặn, phù hợp với cơ thể.Áo cổ tròn, áo cổ cao.Quần áo dáng cứng cáp"
       ]
     },
     {
@@ -85,7 +86,7 @@
     {
       "tag": "test8",
       "patterns": ["trang phuc", "trang phục"],
-      "responses": ["Cho tôi biết chiêu cao(cm) cân nặng (kg)"]
+      "responses": ["Cho tôi biết giới tính, chiêu cao(cm) cân nặng (kg)"]
     },
 
     {
