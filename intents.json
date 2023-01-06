@@ -39,15 +39,14 @@
       "tag": "test",
       "patterns": ["thin"],
       "responses": [
-        "Ban hoi gay vi vay nen tranh mac do bo sat ma hay mac bo quan ao sang ket hop voi ao khoac",
-        "Mặc đồ vừa vặn, phù hợp với cơ thể.Áo cổ tròn, áo cổ cao.Quần áo dáng cứng cáp"
+        "Ban hoi gay vi vay nen tranh mac do bo sat ma hay mac bo quan ao sang ket hop voi ao khoac. Mặc đồ vừa vặn, phù hợp với cơ thể.Áo cổ tròn, áo cổ cao.Quần áo dáng cứng cáp.Không lựa chọn thời trang quá rộng. Mặc theo style layering. Áo Oversize phong cách. Mix thời trang với nhiều chi tiết"
       ]
     },
     {
       "tag": "test2",
       "patterns": ["fat"],
       "responses": [
-        "Ban hoi beo vi vay nen mac bo quan ao bo mot chut tranh mac do rong"
+        "Ban hoi beo vi vay nen Ưu ái các tông màu tối. Ưu tiên các chất liệu đứng form. Chọn lựa các item thời trang vừa vặn với cơ thể. Lựa chọn trang phục đúng kích cỡ, không quá to bởi sẽ làm bạn trông béo hơn. "
       ]
     },
     {
@@ -64,11 +63,6 @@
         "Ban nen duong am bang cac loai dau tu nhien ,chua cac thanh phan mat ong "
       ]
     },
-    {
-      "tag": "test 5",
-      "patterns": ["Da dau"],
-      "responses": ["Lam sach voi tay trang"]
-    },
 
     {
       "tag": "test6",
@@ -82,8 +76,8 @@
       "tag": "test 7",
       "patterns": ["cham soc da", "chăm sóc da"],
       "responses": [
-        "Da cua ban thuoc loai gi? Nếu bạn không rõ hay nhập những biểu hiện da của bạn trong list sau đây[Căng,Bong tróc,Nhiều mụn,Bệnh về da,Nhiều dầu,Ngứa,Mẩn đỏ,Dễ dị ứng,Sần sùi,Lỗ chân lông to]",
-        "Da của bạn thuộc loại gì? Nếu bạn không rõ hay nhập những biểu hiện da của bạn trong list sau đây[Căng,Bong tróc,Nhiều mụn,Bệnh về da,Nhiều dầu,Ngứa,Mẩn đỏ,Dễ dị ứng,Sần sùi,Lỗ chân lông to]"
+        "Da cua ban thuoc loai gi? Nếu bạn không rõ hãy nhập những biểu hiện da của bạn trong list sau đây [Căng,Bong tróc,Nhiều mụn,Bệnh về da,Nhiều dầu,Ngứa,Mẩn đỏ,Dễ dị ứng,Sần sùi,Lỗ chân lông to]",
+        "Da của bạn thuộc loại gì?  Nếu bạn không rõ hãy nhập những biểu hiện da của bạn trong list sau đây[Căng,Bong tróc,Nhiều mụn,Bệnh về da,Nhiều dầu,Ngứa,Mẩn đỏ,Dễ dị ứng,Sần sùi,Lỗ chân lông to]"
       ]
     },
     {
